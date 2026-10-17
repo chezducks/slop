@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><style>* { cursor: crosshair !important; }</style>
+<img src="https://sweetembed.neocities.org/se_spacer.png" alt="" width="1" height="1" style="position:absolute; visibility:hidden;"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My slop</title>
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+
+audio player -->
+<audio id="bg-music" loop>
+  <source src="https://files.catbox.moe/mbspcg.wav" type="audio/mpeg">
+</audio>
+
+<!-- The custom Play/Pause button -->
+<button id="music-btn" onclick="toggleMusic()">🎵 CINEMA</button>
+
+<script>
+  function toggleMusic() {
+    var music = document.getElementById("bg-music");
+    var button = document.getElementById("music-btn");
+    
+    if (music.paused) {
+      music.play();
+      button.innerHTML = "⏸️ ASCEND ";
+    } else {
+      music.pause();
+      button.innerHTML = "🎵 U LIKE?";
+    }
+  }
+   
+</script>
+
+
+
+    
+</script>
+    
+
+
+
+    <style>
+        /* --- 1. ANIMATED STARFIELD BACKGROUND --- */
+        body {
+            background-color: #000510;
+            margin: 0;
+            padding: 20px;
+            font-family: "MS Sans Serif", Geneva, sans-serif; /* Classic OS Font */
+            color: #ffffff;
+            overflow-x: hidden;
+            /* Tiled star background effect */
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            animation: starMove 60s linear infinite;
+            
+        
+
+        @keyframes starMove {
+            from { background-position: 0 0, 0 0, 0 0; }
+            to { background-position: 550px 1100px, 350px 700px, 250px 500px; }
+        }
+
+        /* --- 2. THE "WINDOW" COMPONENTS --- */
+        .window {
+            background: #c0c0c0; /* Classic Gray */
+            border: 2px solid;
+            border-color: #002060 #87ceeb #87ceeb #002060 ; /* Beveled edge*/
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            color: #000;
+            margin-bottom: 20px;
+            animation: windowFloat 4s infinite ease-in-out;
+        }
+
+        @keyframes windowFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .window-title {
+            background: linear-gradient(90deg, #000080, #1084d0); /* Classic Blue Title Bar */
+            padding: 3px 10px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .window-body {
+            padding: 15px;
+            border: 1px inset #fff;
+            margin: 2px;
+        }
+
+        /* --- 3. LAYOUT --- */
+        .desktop-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 250px 1fr 200px;
+            gap: 15px;
+        }
+
+        /* Sidebar Nav Styling */
+        .nav-list { list-style: none; padding: 0; }
+        .nav-list li a {
+            display: block;
+            background: #eee;
+            border: 1px solid #808080;
+            padding: 5px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+        }
+        .nav-list li a:hover { background: #dfdfdf; border-color: #000; }
+
+        /* --- 4. DECORATIONS --- */
+        marquee {
+            background: #ffff00;
+            color: #000;
+            border: 1px solid #000;
+            font-weight: bold;
+            padding: 2px;
+            margin-bottom: 10px;
+        }
+
+        .pixel-art-icon {
+            image-rendering: pixelated;
+            width: 32px;
+            height: 32px;
+        }
+
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .desktop-container { grid-template-columns: 1fr; }
+        }
+    </style>
+<style id="custom-cursor" type="text/css">body button, body [type='button'], body input[type='reset'], body input[type='submit'], body [role="button"], ::-webkit-search-cancel-button, ::-webkit-search-decoration, ::-webkit-scrollbar-button, ::-webkit-file-upload-button, [role^=button], .cc_pointer, [type="search"]::-webkit-search-cancel-button, a, select, [type="search"]::-webkit-search-decoration, .paper-button, .ytp-progress-bar-container, input[type=submit], :link, :visited, a > *, img,  ::-webkit-scrollbar-button, .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer, ::-webkit-file-upload-button, .ytp-volume-panel, #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon, body .custom-cursor-on-hover {cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAE1klEQVR4AexXW2gcZRT+Zmdm01yaxtxtotbG24M11SIFQTGKFW+lRqFIpQ+x2OqDCIoFoSCCWBWj8cEimleJt1IxCiK1VqXFVmOrUtpEk5KNtc1929242Z2d8Tv/7GR3k51ZU4JPLvvN+f9zzpzv+88/FyaEYr/JN3djuiuKqa5jiHWuKZa+2HiwgGjnVdC0nXBQycKtSOlP0y7pP1iAFq7LY3NQljdfgkmwgCUgKFbifwHFO+BogMM0R6clivV0kXFWDjgjZQB2mDCBNGETAekXEwoWABLaFOGRpynmYlgCzgkWYOWSy/i/3gLpgKxeIFvhsAM/vmMi8uEaRD6+OmBh/zoU3AF1DXAb0rJ6gak1NTQducds/OU2vbZfH9q3RzENftqA4d7rKaxUzRdxCBagtoDEcvFRRINTtumVFTes3VK2CjsqWvBkRct2DPQ+0VZSN7I13PTrNen6fgzuv0LxD3xRAueF4PpMLJLA1Sty1641Lil5NzqCjrMn8OLEIG4MV6G9bOVrHeWXG3eV1uOZFS3NFSnn8et+/35ve2lT/O7hjefw21cPkcf3HyxAtoArh4KJ72ZiOBiPIWnrOJlI4YPpUW1DaX355xem8NJoBKPJFG4tqd32XM3qBzeV1+tbK1fWbq5s3uPLzkCwAIsrF3J1KxqYsZguF6SAvm9icfwxm0DP9BQFWegcO4s7ymvrD9PfMTyEnWciqNbC8iYlVeE/KxYOuF7uv5AJcrYCJAd9s5aOj6ajgIoZmKLAoUQS3eOTsJgzkgS+PB93S/kcswKOH7wSPx9YlZeXYgekOItBOkHSPMvY6USaT0kKlRyiZ+I8bJVLH+3gTDrLkVfcnYTgHDBuOtXX81Rt8+DzjauH2odOHsORQ7eosHcXsJAi5t6DJO6YBLljlWNiMsl3B4XBE+uYdKhqBQ+h9f11uzZU1GyOW0CppuPhqrrWjobG/Th69HaAHVCFDbaZKDRWRMzzSJVlrohTY8YKUrvOUF9stmX3X+PoHotiV2QUXWfG0FZetey+5dXvwzaXQwrNJ/HmYoVE5ZB0TiBJ58aG7VIVPoZS69Y9CsfYBtu0CfwQS+PlyDgeqam+tFkLb1etFAKBIswQyVzgEYmdv0XiS+uJwtSuN6TMza3dcMLPigCkdZz428HesTi21FRvlDlUIRJ7hJ5Vfj1zEWZsro+1eO45xeFzcAVIcP21b8DWe3mCKrhvYhaHp5KGEjVHmEPi+Tw7vzsiRLbHMgakvB+yAiQjsWwHCeMiQm6lb6Nyi+WQqqLshLuy7IUpIgRzcebIXADjtJT2Q76AOy/7k+SvQk6UYgJZhbJGPqH4BLm5Mheoc+RCJCyjz49c/PkCxKOZnRQwQWQI2YEFJCysSChKWq8wfyxzwjZ+krJ+WCigrT4Gy3gL84sqER4xrVopCZTNiHQ4lzyBjB1jGveWH/cjF/9CAeJNmW/DNmezIgx1YUIKK2QI1Zgxz3pixAos/Wt+2jlS0g+FBTxQOY60wQcRi7srcbfDI/KskKhxoY5QJPTP/Ig9f2EBEtWM99SKhUQgRGK9O0CsPHjEyvvGZimbj331HSEWMUziEykVBJ7lE77fPEQBp/iUtPh8cOGELH6k8K2hZaHBggfkjV/HY9oFn+pz7n8AAAD//7ob5EMAAAAGSURBVAMAujk7QdJ+hbEAAAAASUVORK5CYII=") 9 0, pointer !important;} html,body,body select,body .custom-cursor-default-hover {cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFYklEQVR4AcSWa2wUVRiG33POzG731i2lRSiFqm0trRANMVFbGqJFCCIhyN3EYEzUeIkh/lECJE1U/hgCmEiC0UjiD8nKJQVSUoUUAjEIKNj4Q4KpBNuy3V62F7q7s7sz4/dN2xSClC0tZTLfnDNzzpz3Oe+5zEhEd30He68XD+mQpLtK9CYuo2fnfMpP+kkAIjFLBEtLZd4viO7YNNkEBID4dSuKKm22e61r7k4tuvsYwl9MmywQCYEEIHEi1Yx1ejG2ZlUuy3dP/R3RvS9MBoQkkTgFWqweNKTasEQVYJeneuZ8zPgJ4X3bYTdqXP6gggHIARuwNRxPXkPYSmKW9GO7Z7623v3EZm9bxym0HSx6cAC2GICtCEDh33SMXGiHtAW8QsN7nmJ84p9XVWT6LqO5bs2DgJCwRcwBsDTAcuFovAWdVgqCIBRFjSsftTkVOQvc00LqyvG9uHh0QvcMAtAScMQZQKE1GcfPiQ4ompg2zVDbBsqUD6u9M7AhOPvt3EDwAppOz5soNySJDwHQMDCI7UJd7AY6zTTIHUfnV6Mfzekk8mUWNgYLK+ZlZZ/DH+ffdQrHeZEwtTisIXEGoHyLYeB4vJP6LxA2U/iHxBXNE2VJaOTNy4E873L/lD3ui5cO4UzTFIzjIAd0AmD7ORiEwtZR1x9BN7kwg3rtoRXC4oKGBbaETXOjIsuHt/KmrZzpdV/C2SvVuM9DQgzPARKm3sPSAXKizUihfiDqNFuieWhSSnouIcgFDklpjtTxRn5uUZXP24jTzVsRIpucNzK/SKRVbHAIGIDFOZUA9bqutxu9aQtFKgsW9ZrnhKBUkQsc7ATD1OT41Ma8wKf+/BsncbJzZubyvAdbyuAew+k5i3PwcOhoM0wc6+9DQGrIky6wKIckAEec0kEoicezXPiwwL+wzCWa0NC9PFMISZMwDbJ8xIVhAErJhUPRKLpME8W6izYo6QSLM4hOAMIS6DBs/Nln4XyvZWULLQpLvYaGvjmZQNCM0ghAgV4aCu79yH3YsFDf049CAkiZApf6kzgdNfBDJN6zs2Wg8fNrA7v3tBrv/BhJP3OiPRa4sCBYgqXBDViS/RcyOCQJJyluEb8dAOxC10300VwodbtxpjfZdzaWKr9a/83UnurCF62awk1YNP1rLMn/DcsLYhlo3laFhkDSRsQ9ZmEOzt8aGsIGcKQ7jmK3C9V+bzYMtQq1tdZtLd3njYRN+4DJwhwsTCvAWY58PzQ8tLoOdNBXmyRrgh7kKv0jnGiZigk4JC3DBMjmkWFgCBZ3ludLMFUTl0XIhcOdCTxKLtQEPLkw3R9PgD5tbTZtRKYCCQ2GsyLYFbyK58tP0fPNDAByIdRuwCclnvbpeETq76NuoGC8EOzAgCPg2M4gOv2giJWonNvgNL6wuJ7Kz1AgYkgciaQw3aWwONfthcQ2p844LpJ6NgRAttsabUpiDZ4tHxQfbthUWxiAhyp0w0SOJlHm0TBL195EKFEyXO1+UkkWJ5yNyNaSSGMdKsuP3dHQogJyQGMnaNORaOyyEZACS3M1FzS99o76Y3ggIRUBqDRMtR5VT9bd9V3h3kKgFjmG/a1AtiZR4pF4zC3X45D91F3fu0eBRNLFY/46KssOj1p3sf8yLBligE5D4Vw36LMMLMujHwQLn4367iiFkoRb8VzF/lHqjBRZchssLQX6BhxoE/AooMgDzPHiFRy0q0YqZp6TmVelmiuy/iYXvuUvYJcJnKffhTD5R9mbVFpKMeZzbADcfNqxO87ZUATJHdfx1dUUSrBK7ONnY42xA6wVrfSz+CUJfZ9MYw5Wiw+wQrTT/f+e93r4HwAAAP//XmDuWwAAAAZJREFUAwAIAius2UKFRQAAAABJRU5ErkJggg==") 0 0, auto !important;}</style><!-- CSS FLOATING BUBBLES -->
+<style class="injected-bg-style">
+.bubble-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; overflow: hidden; pointer-events: none; background: #0066cc; }
+.bbl { position: absolute; bottom: -50px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.5); animation: floatUp infinite ease-in; }
+@keyframes floatUp { to { transform: translateY(-110vh) translateX(20px); opacity: 0; } }
+</style>
+</head>
+<body><div class="bubble-bg injected-bg-style">
+  <div class="bbl" style="left: 10%; width: 40px; height: 40px; animation-duration: 8s;"></div>
+  <div class="bbl" style="left: 30%; width: 20px; height: 20px; animation-duration: 5s; animation-delay: 2s;"></div>
+  <div class="bbl" style="left: 60%; width: 60px; height: 60px; animation-duration: 12s; animation-delay: 1s;"></div>
+  <div class="bbl" style="left: 80%; width: 30px; height: 30px; animation-duration: 6s; animation-delay: 4s;"></div>
+</div>
+
+    <marquee scrollamount="5">Welcome to my web ig |  <span class="blink">UNFINISHED, but pretty much gets an update everyday :/</span></marquee>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Promised Future</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+
+
+  <div class="desktop-container">
+        
+        <div class="window" style="animation-delay: 0.2s;">
+            <div class="window-title">
+                <span>Navigation</span>
+                <span>[X]</span>
+            </div>
+            <div class="window-body">
+                <ul class="nav-list">
+                    <li><a href="https://chezducks.neocities.org">Main Page</a></li>
+                    <li><a href="https://chezducks.github.io/my-retro-games-or-smth">Super Mario World</a></li>
+                    <li><a href="https://chezducks.atabook.org/">Guestbook</a></li>
+                    <li><a href="https://github.com/chezducks" class="">Github</a></li>
+                   
+                   
+   
+   
+                    
+                    
+            </div>
+        </div>
+
+        <div class="window" style="animation-delay: 0s;">
+            <div class="window-title">
+                <span class="">C:\WINDOWS\chezducks\Home.exe</span>
+                <span>[X]</span>
+            </div>
+            <div class="window-body">
+                <h2 class="">Hello, Viewer!</h2>
+                <p class=""></p>
+                <p>So uhmm, to the left tab are my alt wesbties. (i have a lot for things). Me Website! Ive made a few webs over the years and this ones pretty basic tbh. But im working on it!  
+                    <li><a href="https://chezducks.neocities.org/FirstTestEver!!">First Website Eva!</a></li>
+                    <li><a href="https://chezducks.neocities.org/chuckle">Click Me pls</a></li>
+                    <li><a href=https://chezducks.neocities.org/BetaFeatures class="">Testing Features</a></li></p> <divstyle="text-align: start;"i like ducks</div><div style="text-align: start;"><br></div>
+            </div>
+             
+        </div>
+
+        <div   class="window" style="animation-delay: 0.4s;">
+            <div class="window-title">
+                <span class="">Facts or smth</span>[X]
+            </div>
+            
+            <div class="window-body" style="font-size: 0.8em;">
+                <p class=""><strong>The name chezducks is my favourite animal (cheese duck)</strong></p>
+                <p><strong>- I like TF2. a LOT. its a old game</strong></p>
+                <p class=""><strong>- Im cat person :3</strong></p><p class=""><strong>- i like cookies, cupcakes, and cucumbers.</strong></p>
+                <hr>
+                <p style="text-align: center;">uhmm, woof?</p>
+            </div>
+            
+        </div>
+      <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/nof3vn?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>   <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%"><iframe allow="fullscreen;autoplay" allowfullscreen height="100%" src="https://streamable.com/e/y5sfzs?autoplay=1&loop=0" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
+    </div> 
+
+  
+
+
+<img id="sweetembed-tracking-pixel" src="https://sweetembed.neocities.org/se_spacer.png" alt="" width="1" height="1" style="position: absolute; visibility: hidden;"></body></html>
+  
